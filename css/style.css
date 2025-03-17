@@ -28,6 +28,14 @@ body {
   top: 0;
   z-index: 2;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+  transition: background-color 0.2s;
+}
+.navbar-light {
+  background-color: #fff;
+  color: rgb(41, 45, 51);
+}
+.navbar-light .header-logo-path {
+  fill: rgb(41, 45, 51);
 }
 .header {
   padding-top: 94px;
