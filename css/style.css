@@ -146,6 +146,7 @@ body {
   list-style: none;
   color: #fff;
   position: relative;
+  width: 1440px;
 }
 .header-features-item {
   padding-top: 34px;
@@ -153,6 +154,7 @@ body {
   padding-right: 50px;
   padding-bottom: 23px;
   border: 1px solid rgba(235, 235, 240, 0.2);
+  width: 295px;
 }
 .header-features-item:not(:last-child) {
   border-right: none;
