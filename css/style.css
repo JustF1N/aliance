@@ -16,6 +16,10 @@ html {
 body {
   font-family: "Noto Sans", sans-serif;
 }
+.mobile-menu {
+  display: none;
+}
+
 .container {
   max-width: 88.9375rem;
   margin: auto;
@@ -38,6 +42,9 @@ body {
   color: rgb(41, 45, 51);
   height: 4.625rem;
 }
+.phone-icon {
+  fill: #5c8ee6;
+}
 .navbar-light .header-logo-path {
   fill: rgb(41, 45, 51);
 }
@@ -49,7 +56,7 @@ body {
   background-image: url("../img/header-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom -3rem;
+  background-position: center top -3.3125rem;
   position: relative;
 }
 .header-image::before {
@@ -118,6 +125,9 @@ body {
   flex-shrink: 0;
   height: 100%;
   padding: 1.5625rem 2.3125rem 1.5625rem 3.25rem;
+}
+.navbar-button .button-icon {
+  display: none;
 }
 .seporator {
   background: rgb(92, 142, 230);
@@ -251,7 +261,7 @@ body {
   width: 2.5rem;
   margin-right: 1.25rem;
 }
-@media (max-width: 1700px) {
+@media (max-width: 1725px) {
   html {
     font-size: 14px;
   }
@@ -261,17 +271,166 @@ body {
 }
 @media (max-width: 1500px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
   .header-image {
     background-position: center;
+  }
+  .header-logo {
+    padding: 2rem;
+  }
+  .logo-svg {
+    max-width: 6rem;
+  }
+  .header-nav {
+    padding-left: 2rem;
+  }
+  .header-nav-item:not(:last-child) {
+    margin-right: 1rem;
   }
 }
-@media (max-width: 1500px) {
-  html {
-    font-size: 11px;
+@media (max-width: 1200px) {
+  .container {
+    max-width: 70rem;
   }
-  .header-image {
-    background-position: center;
+  .header-phone {
+    display: none;
+  }
+  .navbar {
+    height: 5rem;
+  }
+  .navbar-button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    min-width: 60rem;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-logo {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .mobile-menu-toggle {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.8rem;
+    border-right: 1px solid rgba(235, 235, 240, 0.2);
+  }
+  .navbar-light .mobile-menu-line {
+    background-color: #333;
+  }
+  .mobile-menu-line {
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+  }
+  .mobile-menu-line:nth-child(2) {
+    width: 80%;
+  }
+  .navbar-button .button-text {
+    display: none;
+  }
+  .navbar-button .button-icon {
+    display: block;
+    fill: #ffffff;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .mobile-menu.is-open {
+    display: block;
+  }
+  .mobile-menu-nav {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .mobile-menu-nav-item {
+    padding-bottom: 2rem;
+  }
+  .mobile-menu-link {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #292d33;
+  }
+  .mobile-submenu {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  .mobile-submenu-link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #828a99;
+  }
+  .mobile-phone {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #292d33;
+    border-top: 1px solid #ebebf0;
+    padding-top: 2rem;
+  }
+  .mobile-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  .mobile-info-address,
+  .mobile-info-email {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #292d33;
+  }
+  .geo-icon {
+    margin-right: 12px;
+    margin-left: 2px;
+  }
+  .mail-icon {
+    margin-right: 8px;
+  }
+  .mobile-social {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    gap: 15px;
   }
 }
