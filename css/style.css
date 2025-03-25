@@ -173,13 +173,31 @@ body {
   padding-left: 3.125rem;
   padding-right: 3.125rem;
   padding-bottom: 1.4375rem;
+  min-height: 100%;
   border: 1px solid rgba(235, 235, 240, 0.2);
   width: 18.4375rem;
 }
-.header-features-item:not(:last-child) {
-  border-right: none;
-}
 
+.slider-buttons {
+  display: none;
+  height: 44px;
+}
+.slider-button-prev,
+.slider-button-next {
+  height: 100%;
+  flex-basis: 50%;
+  border: 1px solid rgba(235, 235, 240, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.steps-slider-button {
+  display: none;
+  background-color: rgb(58, 113, 209);
+  max-width: 120px;
+  max-height: 40px;
+}
 .header-features-text {
   font-weight: 400;
   font-size: 1rem;
@@ -303,6 +321,12 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .slider-buttons {
+    display: flex;
+  }
+  .steps-slider-button {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
   html {
@@ -421,20 +445,6 @@ body {
     letter-spacing: 0%;
     color: #292d33;
   }
-  .geo-icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .mail-icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .mobile-social {
     display: flex;
     align-items: center;
@@ -446,9 +456,36 @@ body {
     display: none;
   }
   .close-menu .mobile-menu-line:nth-child(1) {
-    transform: rotate(45deg) translateY(9px);
+    transform: rotate(45deg) translateY(10px);
   }
   .close-menu .mobile-menu-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-9px);
+    transform: rotate(-45deg) translateY(-10px);
+  }
+  .steps-slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 40rem;
+  }
+  .header-title {
+    font-size: 4rem;
+  }
+  .header-content {
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-content {
+    padding-top: 2rem;
   }
 }

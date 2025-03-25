@@ -50,3 +50,32 @@ mMenuToggle.addEventListener("click", (event) => {
 */
 
 // Чтобы посмотреть функцию, нужно навести мышь на функцию и зажать ctrl. Чтобы перейти к функции нужно кликнуть по функции с зажатым ctrl
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  speed: 400,
+  autoHeight: true,
+  slidesPerView: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev",
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    576: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  },
+});
